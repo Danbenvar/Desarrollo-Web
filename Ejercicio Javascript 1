@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript ejercicio 1</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  document.write('Daniel Benítez');
+  document.write('<br>');
+  document.write('26');
+</script>
+
+</body>
+</html>
