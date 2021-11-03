@@ -1,1 +1,66 @@
+<!DOCTYPE html>
 
+    <html lang="esp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 1 Sintaxis</title>
+    </head>
+
+    <body>
+        <script>
+
+            class Colegio{
+
+                constructor (nombre, numeroAulas, numeroAlumnos){
+
+                    this.nombre = nombre;
+                    this.numeroAulas = numeroAulas;
+                    this.numeroAlumnos = new Array();
+
+                    for (let i = 0; i < numeroAlumnos; i++){
+
+                        this.numeroAlumnos[i] = new Alumno (i, " Juan" + i, 7.0);
+                    }
+                }
+
+                consultar (n) {
+
+                    this.numeroAlumnos[n].consultarNota();
+                }
+
+                cambiar (n, nuevaNota) {
+
+                    this.numeroAlumnos[n].cambiarNota(nuevaNota);
+                }
+            }
+
+            class Alumno{
+
+                constructor(DNI, nombre, notaMedia){
+
+                    this.DNI = DNI;
+                    this.nombre = nombre;
+                    this.notaMedia = notaMedia;
+                    }
+
+                    consultarNota(){
+
+                        alert(" El alumno" +this.nombre + " tiene "+ this.notaMedia);
+                    }
+
+                    cambiarNota(nuevaNota){
+
+                        this.notaMedia = nuevaNota;
+                    }
+                }
+
+            const MDC = new Colegio("I.E.S. Mar de Cádiz", 10, 1);
+
+            MDC.consultar(0);
+            MDC.cambiar(0, 10.0);
+            MDC.consultar(0)
+            
+        </script>
+    </body>
+</html>
