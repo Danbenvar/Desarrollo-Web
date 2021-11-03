@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript ejercicio 3</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let usuario;
+        let correo;
+        usuario = prompt('Ingrese el nombre de usuario:');
+        correo = prompt('Ingrese el correo:');
+        document.write('Nombre de usuario ingresado:');
+        document.write(usuario);
+        document.write('<br>');
+        document.write('Correo ingresado:');
+        document.write(correo);
+    </script>
+
+</body>
+
+</html>   
