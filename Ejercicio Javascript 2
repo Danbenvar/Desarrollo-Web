@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript ejercicio 2</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let nombre = 'Daniel';
+        let sueldo = 2300;
+        document.write(nombre);
+        document.write('<br>');
+        document.write(sueldo);
+    </script>
+
+</body>
+
+</html>     
