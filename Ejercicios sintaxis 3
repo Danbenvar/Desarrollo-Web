@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3 sintaxis</title>
+    </head>
+
+    <body>
+        
+        <script>
+            
+            class Hospital{
+
+                constructor(nombreHospital, ciudad, numPacientes){
+
+                    this.nombreHospital = nombreHospital;
+                    this.ciudad = ciudad;
+                    this.numPacientes = new Array();
+
+                    for(let i = 0; i < numPacientes; i++){
+
+                    this.numPacientes[i] = new Paciente(i, i, i);
+                    }
+                }
+            }
+
+
+            class Paciente{
+
+                constructor(DNI, nombrePaciente, enfermedad){
+
+                    this.DNI = DNI;
+                    this.nombrePaciente = nombrePaciente;
+                    this.enfermedad = enfermedad;
+                }
+            }
+
+
+
+                alta(codigo)
+
+                    var borrar;
+
+                    for(let i = 0; i < numPacientes; i++){
+
+                        if(this.numPacientes[i].find(codigo)){
+
+                            borrar = numPacientes.splice()
+                        }
+                    }
+                
+            
+        </script>
+    </body>
+</html>
