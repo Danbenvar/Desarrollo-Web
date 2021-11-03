@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 2 sintaxis</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            class Aeropuerto {
+                constructor(nombre, ciudad, nVuelos) {
+                    this.nombre = nombre;
+                    this.ciudad = ciudad;
+                    this.vuelos = new Array();
+        
+                    for (let i = 0; i < nVuelos; i++) {
+                    this.vuelos[i] = new Vuelo(i, "09:00", "12:00");
+                    }
+
+                }
+
+                    cambiarHoraLLegada(n, nuevaHora) {
+                    this.vuelos[n].cambiarHoraLLegada(nuevaHora);
+                    }
+
+                    cambiarHoraSalida(n, nuevaHora) {
+                    this.vuelos[n].cambiarHoraSalida(nuevaHora);
+                    }
+
+
+                    compruebaLLegadaMayorSalida(n) {
+                    alert(this.vuelos[n].compruebaLLegadaMayorSalida());
+                    }
+
+
+                }
+
+            class Vuelo {
+                constructor(codigo, horaSalida, horaLLegada) {
+
+                    this.codigo = codigo;
+                    this.horaSalida = horaSalida;
+                    this.horaLLegada = horaLLegada;
+
+                }
+                    cambiarHoraLLegada(nuevaHora) {
+                        this.horaLLegada = nuevaHora;
+                    }
+
+
+                    cambiarHoraSalida(nuevaHora) {
+                        this.horaSalida = nuevaHora;
+                    }
+
+                    compruebaLLegadaMayorSalida() {
+                        let lleg = this.horaLLegada.split(":");
+                        let sal = this.horaSalida.split(":");
+                        let hhlleg = parseInt(lleg[0]);
+                        let mmlleg = parseInt(lleg[1]);
+                        let hhsal = parseInt(sal[0]);
+                        let mmsal = parseInt(sal[1]);
+
+                        if (hhlleg > hhsal) {
+                        return true;
+                        }
+                            else if (hhlleg < hhsal) {
+                            return false;
+                        }
+                                else {
+
+                                return mmlleg > mmsal;
+        }
+    }
+
+
+}
+            {
+                var miAeropuerto = new Aeropuerto("AeroPuerto", "EL Puerto de Santa María", 10);
+                miAeropuerto.compruebaLLegadaMayorSalida(1);
+                miAeropuerto.cambiarHoraSalida(1, "15:00");
+                miAeropuerto.compruebaLLegadaMayorSalida(1);
+                miAeropuerto.cambiarHoraLLegada(1, "17:00");
+                miAeropuerto.compruebaLLegadaMayorSalida(1);
+            }
+
+
+
+        </script>
+    </body>
+</html>
